@@ -1,0 +1,5 @@
+package com.kenzan.employeetest.entity;
+
+public class Employee {
+
+}

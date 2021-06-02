@@ -1,0 +1,17 @@
+package com.kenzan.employeetest.dao;
+
+import com.kenzan.employeetest.entity.Employee;
+
+public class EmployeeDAO {
+
+	public Employee save(Employee employee) {
+	
+		return null;
+	}
+
+	public Object findById(Long id) {
+		
+		return null;
+	}
+
+}

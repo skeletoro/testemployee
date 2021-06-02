@@ -1,0 +1,5 @@
+package com.kenzan.employeetest.dao;
+
+public class EmployeeDAO {
+
+}
