@@ -63,9 +63,9 @@ public class EmployeeDAO {
 				olderEmployee.setLastName(employee.getLastName());
 			}  if (employee.getDateOfBirth() != null) {
 				olderEmployee.setDateOfBirth(employee.getDateOfBirth());
-			} if (employee.getDateOfEmployment() != null) {
+			}  if (employee.getDateOfEmployment() != null) {
 				olderEmployee.setDateOfEmployment(employee.getDateOfEmployment());
-			} if (employee.getStatus() != null) {
+			} else if (employee.getStatus() != null) {
 				olderEmployee.setStatus(employee.getStatus());
 			}
 			allEmployees.add(olderEmployee);

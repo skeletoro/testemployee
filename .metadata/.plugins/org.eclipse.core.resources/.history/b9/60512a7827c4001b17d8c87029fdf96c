@@ -57,15 +57,15 @@ public class EmployeeDAO {
 		try {
 			if (employee.getFirstName() != null) {
 				olderEmployee.setFirstName(employee.getFirstName());
-			} if (employee.getMiddleInitial() != null) {
+			} else if (employee.getMiddleInitial() != null) {
 				olderEmployee.setMiddleInitial(employee.getMiddleInitial());
-			}  if (employee.getLastName() != null) {
+			} else if (employee.getLastName() != null) {
 				olderEmployee.setLastName(employee.getLastName());
-			}  if (employee.getDateOfBirth() != null) {
+			} else if (employee.getDateOfBirth() != null) {
 				olderEmployee.setDateOfBirth(employee.getDateOfBirth());
-			} if (employee.getDateOfEmployment() != null) {
+			} else if (employee.getDateOfEmployment() != null) {
 				olderEmployee.setDateOfEmployment(employee.getDateOfEmployment());
-			} if (employee.getStatus() != null) {
+			} else if (employee.getStatus() != null) {
 				olderEmployee.setStatus(employee.getStatus());
 			}
 			allEmployees.add(olderEmployee);
