@@ -1,0 +1,68 @@
+package com.kenzan.employeetest.service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.MultiValueMap;
+
+import com.kenzan.employeetest.dao.EmployeeDAO;
+import com.kenzan.employeetest.entity.Employee;
+
+@Service
+public class EmployeeService {
+
+	private static final Logger LOGGER = LogManager.getLogger(EmployeeService.class);
+
+	@Autowired
+	private EmployeeDAO dao;
+
+	public Employee createEmployee(Employee employee) {
+		return dao.save(employee);
+
+	}
+
+	public Employee getEmployees() {
+		return dao.findAll();
+	}
+
+	public Employee getEmployeeById(int id) {
+		try {
+			return dao.findById(id);
+		} catch (Exception x) {
+			LOGGER.error("An Exception was Triggered when trying to gather Employees info with id: " + id, x);
+			throw x;
+		}
+
+	}
+
+	public void deleteEmployee(int id) {
+		try {
+			dao.deleteById(id);
+		}catch(Exception x) {
+			LOGGER.error("An Exception was Triggered when trying to delete Employee with id: " + id, x);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	public Employee updateEmployee(int id, Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

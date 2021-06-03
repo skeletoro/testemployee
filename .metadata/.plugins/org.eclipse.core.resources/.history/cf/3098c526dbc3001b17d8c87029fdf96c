@@ -1,0 +1,5 @@
+package com.kenzan.employeetest.controller;
+
+public class EmployeeController {
+
+}

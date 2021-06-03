@@ -1,0 +1,47 @@
+package com.kenzan.employeetest.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.kenzan.employeetest.entity.Employee;
+import com.kenzan.employeetest.util.Status;
+
+public class EmployeeDAO {
+
+	List<Employee> allEmployees = new ArrayList<Employee>();
+	int employeeId = 0;
+
+	public Employee save(Employee employee) {
+		employeeId++;
+		employee.setId(employeeId);
+		employee.setStatus(Status.ACTIVE);
+		allEmployees.add(employee);
+		return employee;
+	}
+
+	public Employee findById(int id) {
+		Employee activeEmployee = allEmployees
+				.stream().filter(e -> e.getId() == id && e.getStatus() == Status.ACTIVE)
+				.findFirst().get();
+
+		return activeEmployee;
+	}
+
+	public List<Employee> findAll() {
+		List<Employee> activeEmployees = allEmployees
+				.stream().filter(e -> e.getStatus() == Status.ACTIVE)
+				.collect(Collectors.toList());
+
+		return activeEmployees;
+	}
+
+	public void deleteById(int id) {
+		allEmployees.forEach(e -> {
+			if (e.getId() == id) {
+				e.setStatus(Status.INACTIVE);
+			}
+		});
+	}
+
+}
