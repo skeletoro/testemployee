@@ -2,13 +2,12 @@ package com.kenzan.employeetest.entity;
 
 import java.util.Date;
 
-
-
 import com.kenzan.employeetest.util.Status;
 
 
 public class Employee {
 
+	
 	private int id;
 	private String firstName;
 	private Character middleInitial;
