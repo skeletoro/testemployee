@@ -44,7 +44,7 @@ public class EmployeeController {
 		return new ResponseEntity<Object>(service.getEmployees(), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Object> deleteEmployee(@PathVariable int id) {
 		try {
 			service.deleteEmployee(id);

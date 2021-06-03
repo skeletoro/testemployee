@@ -1,8 +1,7 @@
 package com.kenzan.employeetest.entity;
 
-
 import java.util.Date;
-import java.util.List;
+
 
 
 import com.kenzan.employeetest.util.Status;
@@ -18,7 +17,6 @@ public class Employee {
 	private Date dateOfEmployment;
 	private Status status;
 
-	
 	public int getId() {
 		return id;
 	}
